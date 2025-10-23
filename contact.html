@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | citcrab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-img"><img src="logo.png" alt="citcrab logo" /></div>
+                    <h1>citcrab</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>I'd love to hear from you! Feel free to reach out with any questions or collaboration ideas</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Let's Connect</h2>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question, want to say hi, or are interested in collaborating, I'll try my best to get back to you!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>shubhraj@example.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Location</h3>
+                            <p>India</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Social Media</h3>
+                            <div class="social-contact">
+                                <a href="#">Twitter</a>
+                                <a href="#">GitHub</a>
+                                <a href="#">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send Me a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><img src="https://img.freepik.com/premium-vector/vector-new-twitter-logo-x-2023-twitter-x-logo-twitter-with-black-circle_982187-137.jpg" alt="Twitter" /></a>
+                <a href="#"><img src="https://i.pinimg.com/originals/b2/c5/e6/b2c5e65384b1b0ea4cd351b6155e1b29.jpg" alt="GitHub" /></a>
+            </div>
+            <p>&copy; 2023 citcrab - Shubhraj Kumar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Encode values for URL
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            
+            // Create mailto link with citcrab@hotmail.com
+            const mailtoLink = `mailto:citcrab@hotmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+            
+            // Open default mail client without any alert
+            window.location.href = mailtoLink;
+            
+            // Reset the form
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>

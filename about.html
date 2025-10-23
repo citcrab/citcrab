@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | citcrab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a.active {
+            color: #fff;
+            background-color: #333;
+        }
+        
+        /* Page Hero Section */
+        .page-hero {
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .page-hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .page-hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Page */
+        .about-page {
+            padding: 80px 0;
+        }
+        
+        .about-details {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .about-text h3 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+        
+        .about-image {
+            flex: 0 0 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .hobbies {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .hobby-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .hobby-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .hobby-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .hobby-item h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .skill-category h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .skill-category ul {
+            list-style-type: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .cta-section {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #555;
+        }
+        
+        .btn.secondary {
+            background-color: transparent;
+            color: #333;
+            border: 1px solid #333;
+        }
+        
+        .btn.secondary:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #eaeaea;
+            text-align: center;
+            color: #666;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+        
+        .social-links img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .about-details {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+            
+            .cta-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills, .hobbies {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-img"><img src="logo.png" alt="citcrab logo" /></div>
+                    <h1>citcrab</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Get to know more about my journey, interests, and aspirations</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-page">
+        <div class="container">
+            <div class="about-details">
+                <div class="about-text">
+                    <h2>Hi, I'm Shubhraj Kumar</h2>
+                    <p>I'm a 16-year-old student from India with a passion for technology and a dream to become a software developer. My interest in programming started when I discovered how technology can solve real-world problems and create innovative solutions.</p>
+                    
+                    <h3>My Journey</h3>
+                    <p>While I'm still in the early stages of my programming journey, I've been actively learning web development and programming fundamentals. I believe that consistent learning and practice are key to achieving my goal of becoming a skilled software developer.</p>
+                    
+                    <h3>My Hobbies</h3>
+                    <p>When I'm not studying or learning to code, I enjoy:</p>
+                    
+                    <div class="hobbies">
+                        <div class="hobby-item">
+                            <div class="hobby-icon">♟️</div>
+                            <h4>Chess</h4>
+                            <p>I enjoy the strategic thinking and problem-solving aspects of chess</p>
+                        </div>
+                        <div class="hobby-item">
+                            <div class="hobby-icon">📚</div>
+                            <h4>Reading Books</h4>
+                            <p>I love exploring different genres and expanding my knowledge</p>
+                        </div>
+                        <div class="hobby-item">
+                            <div class="hobby-icon">🎮</div>
+                            <h4>Playing Games</h4>
+                            <p>Video games help me relax and sometimes even inspire my coding projects</p>
+                        </div>
+                    </div>
+                    
+                    <h3>My Skills</h3>
+                    <p>I'm currently developing my skills in these areas:</p>
+                    <div class="skills">
+                        <div class="skill-category">
+                            <h4>Web Development</h4>
+                            <ul>
+                                <li>HTML5 & CSS3 (learning)</li>
+                                <li>JavaScript (Learning)</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <ul>
+                                <li>Python (Learning)</li>
+                                <li>C (learning)</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Technologies</h4>
+                            <ul>
+                                <li> GitHub</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>My Goals</h3>
+                    <p>My primary goal is to become a skilled software developer who can create meaningful applications and contribute to the tech community. I'm particularly interested in web development and hope to eventually learn mobile app development as well.</p>
+                    <p>Through this blog, I aim to document my learning journey, share my progress, and connect with others who are also learning to code.</p>
+                    
+                    <div class="cta-section">
+                        <a href="contact.html" class="btn">Get In Touch</a>
+                        <a href="blog.html" class="btn secondary">Read My Blog</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="logo.png" alt="Shubhraj Kumar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><img src="https://img.freepik.com/premium-vector/vector-new-twitter-logo-x-2023-twitter-x-logo-twitter-with-black-circle_982187-137.jpg" alt="Twitter" /></a>
+                <a href="#"><img src="https://i.pinimg.com/originals/b2/c5/e6/b2c5e65384b1b0ea4cd351b6155e1b29.jpg" alt="GitHub" /></a>
+            </div>
+            <p>&copy; 2023 citcrab - Shubhraj Kumar. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
