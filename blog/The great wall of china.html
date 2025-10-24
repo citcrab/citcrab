@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Wall of China | citcrab.github.io</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #fefefe;
+            color: #222;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #222;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            font-style: italic;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin: 30px 0;
+            border: 1px solid #222;
+        }
+        
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .image-item {
+            width: 100%;
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid #222;
+        }
+        
+        .image-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .content-section {
+            margin: 40px 0;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: normal;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            font-weight: normal;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 3px solid #222;
+        }
+        
+        .fact-box {
+            background-color: #f5f5f5;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .fact-box h3 {
+            margin-top: 0;
+        }
+        
+        .dynasty-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .dynasty-list li {
+            margin-bottom: 15px;
+        }
+        
+        .dynasty-name {
+            font-weight: bold;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 2px solid #222;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-image {
+                height: 250px;
+            }
+            
+            .image-item img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Great Wall of China</h1>
+        <p class="subtitle">A journey through time and stone</p>
+    </header>
+    
+    <img src="https://thumbs.dreamstime.com/b/black-white-great-wall-china-chinese-section-near-beijing-118844440.jpg" alt="Great Wall of China" class="hero-image">
+    
+    <div class="content-section">
+        <p>The Great Wall of China stands as one of humanity's most remarkable architectural achievements. Stretching across China's northern borders, this monumental structure weaves through mountains and deserts, representing not just a physical barrier but a testament to Chinese civilization's resilience and ingenuity.</p>
+        
+        <div class="fact-box">
+            <h3>Key Facts</h3>
+            <p>Total Length: 21,196 km (13,170 miles)</p>
+            <p>Construction Period: Over 2,300 years</p>
+            <p>UNESCO World Heritage Site: Since 1987</p>
+        </div>
+    </div>
+    
+    <div class="image-gallery">
+        <div class="image-item">
+            <img src="https://img.freepik.com/free-photo/black-white-scene-great-wall-china_23-2151505509.jpg" alt="Great Wall structure">
+            <p class="image-caption">The architectural grandeur of the Great Wall</p>
+        </div>
+        
+        <div class="image-item">
+            <img src="https://thumbs.dreamstime.com/b/great-wall-china-black-white-photos-mist-89626271.jpg" alt="Great Wall in mist">
+            <p class="image-caption">The Wall emerging from morning mist</p>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2>History and Construction</h2>
+        
+        <p>The Great Wall's construction spans more than two millennia, with different Chinese dynasties contributing to its expansion and reinforcement based on their defensive needs.</p>
+        
+        <h3>Major Construction Periods</h3>
+        <ul class="dynasty-list">
+            <li><span class="dynasty-name">Warring States Period (7th Century - 221 BC):</span> Individual states built separate border walls for self-defense.</li>
+            <li><span class="dynasty-name">Qin Dynasty (221 - 206 BC):</span> Emperor Qin Shi Huang connected and expanded existing walls into a unified defense system.</li>
+            <li><span class="dynasty-name">Han Dynasty (206 BC - 220 AD):</span> Extended the Wall westward to protect Silk Road trade routes.</li>
+            <li><span class="dynasty-name">Ming Dynasty (1368 - 1644 AD):</span> Constructed the most robust and extensive sections using bricks and stone.</li>
+        </ul>
+        
+        <div class="highlight">
+            <p>The most extensive and best-preserved sections visible today, including Badaling and Mutianyu near Beijing, were constructed during the Ming Dynasty.</p>
+        </div>
+        
+        <h3>Materials and Construction</h3>
+        <p>The construction materials evolved throughout history. Early walls used rammed earth - a mixture of local soil, clay, sand, and gravel compacted between wooden frames. During the Ming Dynasty, bricks and cut stone blocks became the primary materials, bound with strong mortar made from lime and sticky rice flour.</p>
+    </div>
+    
+    <div class="content-section">
+        <h2>Purpose and Significance</h2>
+        
+        <p>The Great Wall served multiple purposes throughout Chinese history. Originally conceived as protection against northern nomadic tribes, it evolved to control immigration and emigration, impose duties on goods transported along the Silk Road, and regulate trade.</p>
+        
+        <div class="quote">
+            "He who has not climbed the Great Wall is not a true man."<br>
+            - Chinese Proverb
+        </div>
+        
+        <p>Beyond its military function, the Wall has profound cultural and symbolic importance. It features prominently in Chinese literature, art, and folklore, standing as a powerful national symbol representing China's historical resilience and engineering prowess.</p>
+        
+        <h3>Cultural Legacy</h3>
+        <p>The Wall continues to inspire awe as one of humanity's most ambitious architectural achievements. It attracts millions of visitors annually and remains an enduring symbol of Chinese civilization's strength and perseverance.</p>
+    </div>
+    
+    <div class="content-section">
+        <h2>The Great Wall Today</h2>
+        
+        <p>Today, the Great Wall is one of the world's most iconic tourist destinations. Natural erosion and human activity have damaged approximately 30% of the Ming-era sections, but conservation efforts are ongoing to preserve this invaluable heritage site.</p>
+        
+        <h3>Visiting the Wall</h3>
+        <p>Popular sections to visit include Badaling (the most famous and fully restored), Mutianyu (known for beautiful scenery), and Jinshanling (offering a more authentic experience). When visiting, wear comfortable walking shoes, bring water and sun protection, and respect the historical site by not removing any stones or artifacts.</p>
+        
+        <div class="highlight">
+            <p>The Great Wall continues to stand as a testament to human ambition and perseverance, inviting visitors from around the world to walk in the footsteps of history and marvel at one of our planet's most extraordinary creations.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 citcrab.github.io | The Great Wall of China</p>
+        <p>All images courtesy of Dreamstime and Freepik</p>
+    </footer>
+</body>
+              </html>
