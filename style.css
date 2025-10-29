@@ -608,4 +608,8 @@ footer {
     .skills {
         grid-template-columns: 1fr;
     }
+    #limg{
+        width:23.5px;
+    }
+        
 }
